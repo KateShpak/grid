@@ -131,6 +131,21 @@ a {
     margin: 0 0 0 3px;
 }
 
+@media screen and (max-width: 1195px){  /*этот блок имел пустоты при ресайзе из-за непропорциональности картинок */
+    .upper .content_wrapper{
+        padding: 0 10%;
+        gap: 5px;
+        grid-template: repeat(auto-fit, minmax(200px, 1fr))/ auto;
+
+    }
+    .upper__item.big,
+    .upper__item.top,
+    .upper__item.bottom {
+        grid-row: span 1;
+        grid-column: span 1;
+    }
+}
+
 /*====trending====*/
 
 .trending {
@@ -250,6 +265,7 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
+    margin-bottom: 3px;
 }
 
 .trending__item:hover .cower {
